@@ -15,7 +15,7 @@ class TeachersController extends Controller
         return Teachers::all();
     }
 
-    public function add1()
+    public function add()
     {
         $item = new Teachers();
         $item->name = 'Test Name';

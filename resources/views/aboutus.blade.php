@@ -1,19 +1,38 @@
 @extends('layouts.app')
 
-@section('title', 'About Us')
+@section('title', 'About')
 
 @section('content')
-    <h2>About Us</h2>
-    <p>Welcome to our website! We are a dedicated team committed to providing the best services to our customers.</p>
-    <h3>Our Mission</h3>
-    <p>Our mission is to innovate and deliver high-quality solutions that meet the needs of our clients while fostering a culture of excellence and collaboration.</p>
-    <h3>Our Team</h3>
-    <ul>
-        <li>John Doe - Founder & CEO</li>
-        <li>Jane Smith - Lead Developer</li>
-        <li>Emily Johnson - Marketing Director</li>
-    </ul>
-    <h3>Our History</h3>
-    <p>Founded in 2010, we started as a small startup and have grown into a trusted name in the industry, serving thousands of customers worldwide.</p>
-    {{-- <p>ben:{{$id}}, benchan:{{$name}}</p> --}}
+<div class="row justify-content-center">
+    <div class="col-lg-8">
+        <h2 class="h3 mb-3">About This Project</h2>
+        <p>
+            This is a <strong>Student Management System</strong> built with Laravel 12 to practise
+            full-stack application development — from database design and Eloquent ORM to Blade
+            templating, validation, and pagination.
+        </p>
+
+        <h3 class="h5 mt-4">What It Demonstrates</h3>
+        <ul>
+            <li>MVC architecture with grouped, prefixed, and named routes</li>
+            <li>Eloquent models with soft deletes, factories, and relationships</li>
+            <li>Database migrations and seeders (200+ countries)</li>
+            <li>Server-side search and pagination on real data</li>
+            <li>Request validation, CSRF protection, and flash messaging</li>
+            <li>Blade layouts, reusable views, and Bootstrap-based UI</li>
+        </ul>
+
+        <h3 class="h5 mt-4">Modules</h3>
+        <ul>
+            <li><strong>Countries</strong> — complete CRUD with search and pagination</li>
+            <li><strong>Students</strong> — Eloquent / DB experiments with soft deletes</li>
+            <li><strong>Teachers</strong> — model CRUD fundamentals</li>
+        </ul>
+
+        <p class="mt-4 mb-0">
+            Source code:
+            <a href="https://github.com/ChanHei419/studentManagement" target="_blank" rel="noopener">github.com/ChanHei419/studentManagement</a>
+        </p>
+    </div>
+</div>
 @endsection

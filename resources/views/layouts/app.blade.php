@@ -3,72 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title', 'My Website')</title>
+    <title>@yield('title', 'Student Management System')</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
+            background-color: #f5f7fb;
         }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 1rem;
-            text-align: center;
-        }
-        nav {
-            background-color: #f4f4f4;
-            padding: 1rem;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-        }
-        nav ul li {
-            margin: 0 1rem;
-        }
-        nav ul li a {
-            text-decoration: none;
-            color: #333;
-        }
-        nav ul li a:hover {
-            color: #007BFF;
+        .navbar-brand {
+            font-weight: 700;
+            letter-spacing: 0.4px;
         }
         main {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 0 1rem;
+            min-height: 70vh;
         }
         footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            background: #212529;
+            color: #adb5bd;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>My Website</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about-us">About Us</a></li>
-            <li><a href="/contact-us">Contact</a></li>
-        </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url('/') }}">Student Management System</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="{{ url('/') }}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url('countries') }}">Countries</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url('about-us') }}">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url('contact-us') }}">Contact</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
-    <main>
+
+    <main class="container py-4">
         @yield('content')
     </main>
-    <footer>
-        <p>&copy; {{ date('Y') }} My Website. All rights reserved.</p>
+
+    <footer class="py-3 mt-5">
+        <div class="container text-center small">
+            Laravel 12 · Blade · SQLite / MySQL — built by
+            <a class="link-light" href="https://github.com/ChanHei419" target="_blank" rel="noopener">HeiChan</a>
+        </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
