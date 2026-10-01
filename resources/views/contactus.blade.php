@@ -14,7 +14,7 @@
             Questions about the code, or spotted something to improve? Open an issue on
             <a href="https://github.com/ChanHei419/studentManagement" target="_blank" rel="noopener">GitHub</a>
             or get in touch via
-            <a href="mailto:cccheilllun4129@gmail.com">email</a>.
+            <a href="mailto:cccheilllun419@gmail.com">email</a>.
         </p>
     </div>
 </div>
